@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Login from '../views/login-view.vue'
+import Login from '../views/login/login-view.vue'
+import CardRegister from '../views/card-register/card-register-view.vue'
+import GetCard from '../views/get-card/get-card-view.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,11 +9,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'login',
     component: Login
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import('../views/AboutView.vue')
-  // }
+  {
+    path: '/card-register',
+    name: 'cardRegister',
+    component: CardRegister
+  },
+  {
+    path: '/card',
+    name: 'card',
+    component: GetCard
+  }
 ]
 
 const router = createRouter({
