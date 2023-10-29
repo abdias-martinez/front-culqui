@@ -26,7 +26,6 @@ export const axiosConToken = async (endpoint: string, data: any = null, method =
             return response;
         });
     } else {
-        console.log(data)
         const config = {
             method,
             url,
@@ -37,10 +36,8 @@ export const axiosConToken = async (endpoint: string, data: any = null, method =
             data
         };
         return axios(config).then(({data}) => {
-            console.log(data)
             return data;
         }).catch(({ response }) => {
-            console.log(response)
             return response;
         });
     }

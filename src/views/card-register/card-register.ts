@@ -32,14 +32,7 @@ setup() {
   const register = async() => {
       isLoading.value = true
       messageError.value = null
-      const res = await axiosConToken('/create-token', {
-        card_number: userForm.value.card_number,
-        email: userForm.value.email,
-      expiration_month: userForm.value.expiration_month,
-      expiration_year: userForm.value.expiration_year,
-      cvv: userForm.value.cvv,
-      }, 'POST')
-      console.log(res)
+      const res = await axiosConToken('/create-token', userForm.value, 'POST')
       const {ok, message, data} = JSON.parse(res.body)
       isLoading.value = false
       if(!ok) messageError.value = message
