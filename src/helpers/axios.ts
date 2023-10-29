@@ -16,8 +16,8 @@ export const axiosConToken = async (endpoint: string, data: any = null, method =
             url,
             headers: {
                 'Content-type': 'application/json',
-                'c-token': tokenCommerce,
-                'x-token': data
+                'Authorization': tokenCommerce,
+                'X-Amz-Security-Token': data
             }
         };
         return axios(config).then(({data}) => {
@@ -31,7 +31,7 @@ export const axiosConToken = async (endpoint: string, data: any = null, method =
             url,
             headers: {
                 'Content-type': 'application/json',
-                'c-token': tokenCommerce
+                'Authorization': tokenCommerce
             },
             data
         };

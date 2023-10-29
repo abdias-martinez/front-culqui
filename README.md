@@ -25,6 +25,12 @@ Pasos necesarios para instalar las dependencias y poner en marcha el proyecto.
 4. Visita `http://localhost:8080` en tu navegador
 ```
 
+## Configuración del .env
+en servidor backend es esta dirección configurar en el archivo .env
+```bash
+VUE_APP_BACKEND_URL=https://uyi5qm56j9.execute-api.sa-east-1.amazonaws.com
+```
+
 ## Construido con
 
 - [Vuejs](https://cli.vuejs.org/) - Framework de Vue para construir aplicaciones web escalables.
